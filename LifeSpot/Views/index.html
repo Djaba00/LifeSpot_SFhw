@@ -6,25 +6,25 @@
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
 </head>
 
-<header id="header-index">
-    <!--Заголовок страницы-->
-    <h1>LifeSpot — прямые трансляции с улиц</h1>
-    <!--Парагарф-->
-    <p>На нашем сайте вы можете смотреть прямые трансляции с уличных камер по всему миру!</p>
-</header>
-
 <body>
+    <header id="header-index">
+        <!--Заголовок страницы-->
+        <h1>LifeSpot — прямые трансляции с улиц</h1>
+        <!--Парагарф-->
+        <p>На нашем сайте вы можете смотреть прямые трансляции с уличных камер по всему миру!</p>
+    </header>
+
+    <aside id="sidebar">
+        <div class="navbar">
+            <form>
+                <input class="main-search" type="search" name="search"  placeholder="Поиск" autofocus />
+            </form>
+            <a href="/"><p>Все трансляции</p></a>
+            <a href="/"><p>О проекте</p></a>
+        </div">
+    </aside>
+    
     <main>
-        <aside id="sidebar">
-            <div class="navbar">
-                <form>
-                    <input class="main-search" type="search" name="search"  placeholder="Поиск" autofocus />
-                </form>
-                <a href="/"><p>Все трансляции</p></a>
-                <a href="/"><p>О проекте</p></a>
-            </div">
-        </aside>
-        
         <div class="video-Stack">
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs"
@@ -44,13 +44,12 @@
             encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h3>London, Bus route</h3>
             </div>
-        </div>
-        
+        </div> 
     </main>
-</body>
 
-<footer class="footer">
-    <p>LifeSpot - все права защищены</p>
-    <p>Связаться с нами: contact@lifespot.ru</p>
-</footer>
-</html>
+    <footer class="footer">
+        <p>LifeSpot - все права защищены</p>
+        <p>Связаться с нами: contact@lifespot.ru</p>
+    </footer>
+    </html>
+</body>

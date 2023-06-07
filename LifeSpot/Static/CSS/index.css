@@ -22,7 +22,7 @@ header, body, footer {
 header {
     color: black;
     padding-left: 1%;
-    padding-top: 1.2%;
+    padding-top: 0.2%;
 }
 
 #header-index {
@@ -53,6 +53,7 @@ footer {
 }
 
 aside {
+    float: left;
     height: 100vh; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
     width: 10%;
     position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
