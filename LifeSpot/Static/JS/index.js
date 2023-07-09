@@ -63,6 +63,6 @@ const sessionLog = function logSession(){
     }
 }
 
-setTimeout(() =>
-    alert("Нравится LifeSpot? " + '\n' +  "Подпишитесь на наш Instagram @lifespot999!" ),
-10000);
+// setTimeout(() =>
+//     alert("Нравится LifeSpot? " + '\n' +  "Подпишитесь на наш Instagram @lifespot999!" ),
+// 10000);

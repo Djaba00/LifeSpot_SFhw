@@ -17,7 +17,7 @@ aside {
     grid-row-end: 4;
     min-height: 100vh;
     height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
-    width: 100%; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    min-width: 100%; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
     z-index: 1; 
     background-color: #111; /* Черный цвет фона (задан в виде кода) */
     overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
@@ -30,6 +30,7 @@ header {
     grid-column-start: 2;
     grid-row-start: 1;
     color: black;
+    width: 100%;
     padding-left: 1%;
     padding-top: 1.2%;
 }
@@ -37,6 +38,7 @@ header {
 main {
     grid-column-start: 2;
     grid-row-start: 2;
+    width: 100%;
 }
 
 /* Стили футера */
@@ -46,21 +48,22 @@ footer {
     bottom: 0;
     font-size: medium;
     color: dimgrey;
+    width: 100%;
     line-height: 66%;
     padding-left: 1%; 
 }
 
 /* Комбинированный селектор - применяется ко всем элементам */
-header,footer,aside,body,.navbar,.video-container{
+header,footer,aside,body,.navbar,.video-container {
     font-family: "Helvetica 65 Medium", sans-serif;
 }
 
-header,footer,body,.video-container{
+header,footer,body,.video-container {
     background-color: linen;
 }
 
 /* Компоненты iframe со встроенным видео */
-.video-container{
+.video-container {
     display: inline-block;
     margin-top: 0.5em;
     padding-left: 1%;
@@ -68,19 +71,19 @@ header,footer,body,.video-container{
 }
 
 /* Стили панели навигации */
-.navbar p{
+.navbar p {
     color: darkgray;
     padding-left: 10%;
 }
 
 /* Стили панели навигации при наведении мышью */
-.navbar p:hover{
+.navbar p:hover {
     color: aliceblue;
 }
 
 /* Стиль хедера для главной страницы имеет приоритет, 
 так как используется селектор по идентификатору */
-#header-index{
+#header-index {
     color: #44453f;
 }
 
@@ -102,14 +105,90 @@ input:focus {
     max-width: 80%;
 }
 
-.reviews .review-button{
+.reviews .review-button {
     display: inline-block;
     margin-top: 0.5em;
 }
 
-.review-text{
+.review-text {
     display: block;
     margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
+}
+
+/* slider */
+.slider {
+    position: relative;
+    width: 40rem;
+    height: 16.5rem;
+    overflow: hidden;
+    border: 7px solid gray;
+}
+
+.slider .slider-drag-cursor {
+    cursor: grabbing;
+}
+
+.slider .slider-line {
+    overflow: hidden;
+}
+  
+.slider .slider-slide {
+    min-height: 1px;
+    float: left;
+    user-select: none;
+}
+
+.slider .slider-slide img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    pointer-events: none
+}
+
+.slider .slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .slider-dots .slider-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0.4rem;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+}
+
+.slider .slider-dots .slider-dot-active {
+    background-color: gray;
+}
+
+.slider .slider-nav-button {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 35px;
+    border: 0px;
+    background-color: white;
+    color: black;
+    opacity: 0.4;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  
+.slider .slider-nav .slider-nav-left {
+    left:0px;
+}
+  
+.slider .slider-nav .slider-nav-right {
+    right: 0px;
 }

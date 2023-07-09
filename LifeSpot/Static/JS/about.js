@@ -1,3 +1,10 @@
+// slider
+new Slider(document.getElementById('slider'), 
+{
+    margin: 10
+});
+
+// rewiew
 const getReview = function () {
     
     let review = {};
@@ -24,3 +31,4 @@ const addReview = review => {
         `<p>${review['comment']}</p>`  +
         '</div>';
 }
+
